@@ -23,7 +23,9 @@ function listRepoBranches{
         Set-Location $_.FullName;
 
         if(Test-Path -Path ".git") {
-            Write-Output "$($_.Name) $(" " * ($maxLength - $_.Name.Length)) -> [$(git rev-parse --abbrev-ref HEAD)]";
+            Write-Host "  $($_.Name)" -ForegroundColor Yellow -NoNewline
+            Write-Host "$(" " * ($maxLength - $_.Name.Length)) -> " -NoNewline
+            Write-Host "[$(git rev-parse --abbrev-ref HEAD)]" -ForegroundColor Cyan
         }
 
         Set-Location ../ 
