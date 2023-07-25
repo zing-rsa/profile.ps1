@@ -1,5 +1,4 @@
 ﻿Import-Module posh-git
-Import-Module -Name "mod.ps1"
 
 $vicitude  = "C:\users\kritz\documents\vicitude"
 $desktop   = "C:\users\kritz\desktop"
